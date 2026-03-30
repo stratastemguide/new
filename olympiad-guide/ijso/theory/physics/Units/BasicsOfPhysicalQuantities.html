@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics of Physical Quantities | IJSO Theory - Strata STEM Guide</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../../../../style.css">
+    <link rel="stylesheet" href="../../../../../navbar.css">
+    <link rel="stylesheet" href="../../ijso.css">
+    
+    <!-- KaTeX for Math Rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {
+            delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$', right: '$', display: false},
+                {left: '\\(', right: '\\)', display: false},
+                {left: '\\[', right: '\\]', display: true}
+            ],
+            throwOnError: false
+        });"></script>
+</head>
+
+<body class="physics-theme">
+    <div class="grid-overlay"></div>
+    <div class="bg-mesh">
+        <div class="mesh-blob blob-1"></div>
+        <div class="mesh-blob blob-2"></div>
+        <div class="mesh-blob blob-3"></div>
+    </div>
+
+    <!-- Global Navbar logic -->
+    <script src="../../../../../navbar.js"></script>
+    <script>
+        window.navbarConfig = { activePage: 'olympiad', rootPath: '../../../../../' };
+    </script>
+    <main class="theory-container" style="max-width: 1100px;">
+        <div class="theory-hero reveal" style="text-align: left; margin-bottom: 0.5rem;">
+            <br><br>
+            <h1 style="font-size: 3rem; margin-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.2); display: block; padding-bottom: 1rem;">Basics of Physical Quantities</h1>
+            
+            <div style="display: flex; justify-content: flex-end; margin-top: 1.5rem;">
+                <a href="../UnitsAndDimensions.html" class="back-theory-btn" style="margin-top: 0; font-size: 0.9rem;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    Back to Units
+                </a>
+                <a href="../../Physics.html" class="back-to-path-btn" style="display: none; margin-top: 0;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    Back to Path
+                </a>
+            </div>
+
+            <script>
+                // Context-aware navigation
+                if (window.location.search.includes('mode=level')) {
+                    const backUnitsBtn = document.querySelector('.back-theory-btn');
+                    const backPathBtn = document.querySelector('.back-to-path-btn');
+                    if (backUnitsBtn) backUnitsBtn.style.display = 'none';
+                    if (backPathBtn) backPathBtn.style.display = 'inline-flex';
+                }
+            </script>
+        </div>
+
+        <div class="content-card reveal">
+            <!-- Introduction -->
+            <section class="notes-section">
+                <p>A Physical Quantity is any property of a material or phenomenon that can be quantified by measurement. In physics, we categorize these quantities based on how they behave when we change their direction or combine them.</p>
+            </section>
+
+            <!-- Section 1 -->
+            <section class="notes-section">
+                <h2>1. The Two Components of a Quantity</h2>
+                <p>Every physical measurement consists of two essential parts:</p>
+                <ul>
+                    <li><strong>Numerical Value (n):</strong> The magnitude or "how much."</li>
+                    <li><strong>Unit (u):</strong> The standard of comparison.</li>
+                </ul>
+                <p>Mathematically, the magnitude of a physical quantity ($Q$) is constant, regardless of the unit used:</p>
+                <p style="text-align: center; font-size: 1.5rem; margin: 1.5rem 0;" class="math-highlight">
+                    $Q = n_1u_1 = n_2u_2$
+                </p>
+                
+                <div style="background: rgba(14, 165, 233, 0.05); padding: 1.25rem; border-radius: 12px; border: 1px solid rgba(14, 165, 233, 0.2);">
+                    <p style="margin: 0;"><strong>Concept Check:</strong> If the unit gets smaller (e.g., meters to centimeters), the numerical value must get larger to compensate (1m = 100cm).</p>
+                </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="notes-section">
+                <h2>2. Scalars vs. Vectors</h2>
+                <p>Not all quantities are created equal. Some only care about "how much," while others care about "which way."</p>
+                
+                <div class="responsive-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem;">
+                    <div style="background: rgba(239, 68, 68, 0.05); border-left: 4px solid #ef4444; padding: 1.25rem; border-radius: 0 12px 12px 0;">
+                        <h3 style="margin-top: 0; color: #ef4444;">A. Scalar Quantities</h3>
+                        <p>These are quantities described entirely by a magnitude (numerical value) alone. They follow the simple rules of ordinary algebra.</p>
+                        <p><strong>Examples:</strong> Mass, Time, Temperature, Distance, Energy, and Speed.</p>
+                        <p><strong>Property:</strong> You can add 5kg of sugar to 2kg of sugar and always get 7kg.</p>
+                    </div>
+                    <div style="background: rgba(34, 197, 94, 0.05); border-left: 4px solid #22c55e; padding: 1.25rem; border-radius: 0 12px 12px 0;">
+                        <h3 style="margin-top: 0; color: #22c55e;">B. Vector Quantities</h3>
+                        <p>These require both magnitude and a specific direction to be fully defined. They follow the rules of vector algebra.</p>
+                        <p><strong>Examples:</strong> Force, Velocity, Acceleration, Displacement, and Momentum.</p>
+                        <p><strong>Property:</strong> If you push a box with 10N of force to the left and 10N to the right, the result is 0N. Direction matters!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="notes-section">
+                <h2>3. The "Test of Truth": Dimensional Homogeneity</h2>
+                <p>One of the most basic rules in physics is that you can only add or subtract physical quantities if they have the same nature (the same dimensions).</p>
+                
+                <div style="display: flex; gap: 1.5rem; margin: 1.5rem 0; flex-wrap: wrap;">
+                    <div style="flex: 1; background: rgba(34, 197, 94, 0.1); padding: 1.25rem; border-radius: 12px; border: 1px solid rgba(34, 197, 94, 0.2);">
+                        <p style="margin: 0; font-weight: 600; color: #22c55e;">Allowed:</p>
+                        <p style="margin: 0.5rem 0 0 0;">$5\text{m} + 2\text{m} = 7\text{m}$ (Length + Length)</p>
+                    </div>
+                    <div style="flex: 1; background: rgba(239, 68, 68, 0.1); padding: 1.25rem; border-radius: 12px; border: 1px solid rgba(239, 68, 68, 0.2);">
+                        <p style="margin: 0; font-weight: 600; color: #ef4444;">Impossible:</p>
+                        <p style="margin: 0.5rem 0 0 0;">$5\text{kg} + 2\text{seconds}$ (This calculation has no physical meaning)</p>
+                    </div>
+                </div>
+
+                <p>This principle is the foundation of the <strong>Principle of Homogeneity</strong>, which states that for any physics equation to be correct, the dimensions of every term on the left side must match the dimensions of every term on the right side.</p>
+            </section>
+
+            <!-- Section 4 -->
+            <section class="notes-section">
+                <h2>4. Standardizing the World: Why SI?</h2>
+                <p>Before the International System (SI), different regions used different "Basics":</p>
+                <div style="background: rgba(139, 92, 246, 0.05); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(139, 92, 246, 0.2); margin: 1.5rem 0;">
+                    <ul style="margin: 0; list-style-type: none; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1rem;">
+                        <li><strong>CGS System:</strong> Centimeter, Gram, Second</li>
+                        <li><strong>FPS System:</strong> Foot, Pound, Second</li>
+                        <li><strong>MKS System:</strong> Meter, Kilogram, Second</li>
+                    </ul>
+                </div>
+                <p>The SI System was adopted globally to prevent errors in international engineering and space exploration (like the famous 1999 Mars Orbiter crash caused by a unit conversion error!).</p>
+            </section>
+
+            <!-- Pro-Tip -->
+            <div class="callout-box reveal">
+                <h3>💡 Pro-Tip for Students</h3>
+                <p>When solving any physics problem, the first step is always to identify the Basics:</p>
+                <ul>
+                    <li>Is the quantity a Scalar or a Vector?</li>
+                    <li>Are all values converted to the same system (preferably SI) before you start calculating?</li>
+                </ul>
+            </div>
+
+            <!-- Completion Section -->
+            <div class="completion-section reveal" style="margin-top: 3rem; text-align: center; padding: 2rem; background: rgba(255, 215, 0, 0.05); border-radius: 20px; border: 1px dashed rgba(255, 215, 0, 0.3);">
+                <h3 style="font-family: 'Outfit', sans-serif; margin-bottom: 1rem;">Finished studying this topic?</h3>
+                <p style="margin-bottom: 1.5rem; opacity: 0.8;">Mark it as completed to unlock the next level in your Physics journey!</p>
+                <button id="completeBtn" class="complete-topic-btn">
+                    <span class="btn-text">Mark as Completed</span>
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </button>
+                <p id="statusMsg" style="margin-top: 1rem; font-size: 0.9rem; font-weight: 500; display: none;"></p>
+            </div>
+        </div>
+    </main>
+
+    <style>
+        .complete-topic-btn {
+            background: linear-gradient(135deg, #ffd700, #ffae00);
+            color: #000;
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+        }
+
+        .complete-topic-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+        }
+
+        .complete-topic-btn:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        .complete-topic-btn .check-icon {
+            width: 20px;
+            height: 20px;
+            display: none;
+        }
+
+        .complete-topic-btn.is-completed {
+            background: #22c55e;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+            cursor: default;
+        }
+
+        .complete-topic-btn.is-completed .check-icon {
+            display: block;
+        }
+
+        .complete-topic-btn.is-completed:hover {
+            transform: none;
+        }
+
+        .complete-topic-btn.loading {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+        @media (max-width: 768px) {
+            .responsive-grid {
+                grid-template-columns: 1fr !important;
+            }
+            .theory-hero h1 {
+                font-size: 2rem !important;
+            }
+        }
+    </style>
+
+    <footer class="dynamic-footer reveal">
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="../../../../../logo.png" alt="Strata STEM Guide Logo">
+                    </div>
+                    <p>Sri Lanka's premier destination for high-end academic excellence.</p>
+                </div>
+            </div>
+            <div class="footer-bottom" style="padding-top: 1rem;">
+                <p>&copy; 2026 Strata STEM Guide ACADEMY. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="../../../../../main.js"></script>
+
+    <script type="module">
+        import { auth, db } from '../../../../../firebase-config.js';
+        import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
+        import { doc, getDoc, setDoc, arrayUnion } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js";
+
+        const completeBtn = document.getElementById('completeBtn');
+        const statusMsg = document.getElementById('statusMsg');
+        const topicId = 'basics'; // Unique ID for this topic
+        let currentUser = null;
+
+        // Initialize State
+        onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                currentUser = user;
+            } else {
+                currentUser = null;
+                completeBtn.querySelector('.btn-text').innerText = 'Log in to Track Progress';
+                completeBtn.style.opacity = '0.5';
+                completeBtn.style.cursor = 'not-allowed';
+            }
+        });
+
+        function markUIAsCompleted() {
+            completeBtn.classList.add('is-completed');
+            completeBtn.querySelector('.btn-text').innerText = 'Topic Completed ✨';
+            statusMsg.innerText = "Awesome! You've mastered this topic.";
+            statusMsg.style.display = 'block';
+            statusMsg.style.color = '#22c55e';
+            completeBtn.disabled = true;
+        }
+
+        completeBtn.addEventListener('click', async () => {
+            if (!currentUser) {
+                alert("Please log in to save your progress!");
+                return;
+            }
+            if (completeBtn.classList.contains('is-completed')) return;
+
+            completeBtn.classList.add('loading');
+            completeBtn.querySelector('.btn-text').innerText = 'Saving Progress...';
+
+            try {
+                const docRef = doc(db, "userProgress", currentUser.uid);
+                await setDoc(docRef, {
+                    completedTopics: arrayUnion(topicId)
+                }, { merge: true });
+
+                markUIAsCompleted();
+                
+                // Optional: confetti or success sound
+                if (window.confetti) {
+                    window.confetti({
+                        particleCount: 100,
+                        spread: 70,
+                        origin: { y: 0.6 },
+                        colors: ['#ffd700', '#ffffff', '#22c55e']
+                    });
+                }
+            } catch (error) {
+                console.error("Error saving progress:", error);
+                statusMsg.innerText = "Oops! Something went wrong: " + error.message;
+                statusMsg.style.display = 'block';
+                statusMsg.style.color = '#ef4444';
+                alert("Firebase Error: " + error.message);
+                completeBtn.querySelector('.btn-text').innerText = 'Mark as Completed';
+            } finally {
+                completeBtn.classList.remove('loading');
+            }
+        });
+    </script>
+</body>
+
+</html>
