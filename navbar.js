@@ -58,9 +58,9 @@ function initNavbar(options = {}) {
             <ul class="mobile-nav-links">
                 <li><a href="${rootPath}index.html" class="mobile-nav-link">Home</a></li>
                 <li><a href="${rootPath}olympiad-guide/ijso/Theory.html" class="mobile-nav-link highlight-btn">Start Preparing</a></li>
-                <li><a href="#" class="mobile-nav-link">National Tests</a></li>
-                <li><a href="#" class="mobile-nav-link">Competitions</a></li>
-                <li><a href="#" class="mobile-nav-link">Events</a></li>
+                <li><a href="${rootPath}subjects.html" class="mobile-nav-link">Olympiad Guide</a></li>
+                <li><a href="${rootPath}ptable/Ptable.html" class="mobile-nav-link">Periodic Table</a></li>
+                <li><a href="${rootPath}Grade 6 to 13.html" class="mobile-nav-link">Grade 6-13</a></li>
                 <li><a href="${rootPath}team.html" class="mobile-nav-link">Our Team</a></li>
                 <li id="mobile-account-item"><a href="${rootPath}account.html" id="mobile-account-btn" class="mobile-nav-link">Account</a></li>
             </ul>
