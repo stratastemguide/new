@@ -816,6 +816,7 @@ section { padding: 10rem 10%; }
     .item-large, .item-wide { grid-column: span 1; }
     .card { padding: 2.5rem; }
     
+    .hero { height: auto; min-height: 85vh; padding-top: 6.5rem; justify-content: center; }
     .hero h1 { font-size: 4.5rem; margin-bottom: 1rem; }
     .hero p { font-size: 0.95rem; margin-bottom: 2.5rem; }
     
