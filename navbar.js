@@ -56,13 +56,13 @@ function initNavbar(options = {}) {
                 </svg>
             </button>
             <ul class="mobile-nav-links">
-                <li><a href="${rootPath}index.html">Home</a></li>
-                <li><a href="${rootPath}olympiad-guide/ijso/Theory.html">Start Preparing</a></li>
-                <li><a href="#">National Tests</a></li>
-                <li><a href="#">Competitions</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="${rootPath}team.html">Our Team</a></li>
-                <li id="mobile-account-item"><a href="${rootPath}account.html" id="mobile-account-btn">Account</a></li>
+                <li><a href="${rootPath}index.html" class="mobile-nav-link">Home</a></li>
+                <li><a href="${rootPath}olympiad-guide/ijso/Theory.html" class="mobile-nav-link highlight-btn">Start Preparing</a></li>
+                <li><a href="#" class="mobile-nav-link">National Tests</a></li>
+                <li><a href="#" class="mobile-nav-link">Competitions</a></li>
+                <li><a href="#" class="mobile-nav-link">Events</a></li>
+                <li><a href="${rootPath}team.html" class="mobile-nav-link">Our Team</a></li>
+                <li id="mobile-account-item"><a href="${rootPath}account.html" id="mobile-account-btn" class="mobile-nav-link">Account</a></li>
             </ul>
         </div>
     </div>
