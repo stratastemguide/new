@@ -113,10 +113,7 @@ body::after {
 
 
 
-/* Mobile Nav - Hidden by default globally */
-.mobile-nav {
-    display: none;
-}
+
 
 /* Navbar styles moved to navbar.css */
 
@@ -792,39 +789,8 @@ section { padding: 10rem 10%; }
     .bg-mesh { filter: blur(60px); }
     .mesh-blob { opacity: 0.08; width: 400px; height: 400px; }
     
-    /* Mobile Nav Overlay */
-    .mobile-nav {
-        display: flex;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: rgba(1, 2, 4, 0.98);
-        backdrop-filter: blur(40px);
-        -webkit-backdrop-filter: blur(40px);
-        align-items: center;
-        justify-content: center;
-        z-index: 1000;
-        opacity: 0;
-        pointer-events: none;
-        transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
-    }
+
     
-    .mobile-nav.active { 
-        opacity: 1; 
-        pointer-events: auto; 
-    }
-    
-    .mobile-nav ul { list-style: none; text-align: center; }
-    .mobile-nav ul li { margin-bottom: 2rem; }
-    .mobile-nav ul li a {
-        font-family: var(--font-display);
-        font-size: 2.5rem;
-        font-weight: 800;
-        color: white;
-        text-decoration: none;
-    }
 
     .stats-grid {
         display: grid;
